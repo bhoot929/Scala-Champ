@@ -15,9 +15,14 @@ object ReadS3Data {
     val conf = new SparkConf().setAppName("ReadS3Data").setMaster("local")
     val sc = new SparkContext(conf)
 
-    // Create a SparkContext using every core of the local machine
-    //val sc = new SparkContext("local[*]", "WordCount")
-
+    // to read data from S3 bucket we need to add below dependency
+    //in case of Maven:
+   //  <dependency>
+    //      <groupId>org.apache.hadoop</groupId>
+     //     <artifactId>hadoop-aws</artifactId>
+      //    <version>2.9.1</version>
+     // </dependency>
+    
     // Read each line of my book into an RDD
     val p = sc.textFile("s3n://Accesskey:Secretkey@bucketname/filename")
 
