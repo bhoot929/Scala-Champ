@@ -28,6 +28,12 @@ object ReadS3Data {
 
 
     print(p.count())
+    
+    //To write data to S3:
+    p.take(10)
+    
+    p.saveAsTextFile("s3n://Accesskey:Secretkey@bucketname/filename")
+
   }
 
 }
