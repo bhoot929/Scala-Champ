@@ -55,3 +55,5 @@ spark-submit --class com.swapnil.WordCount scala_sbt_test_2.11-0.1.jar
 
 Where class is name of your class and jar should be present on /home/hadoop
 
+#If file is present on S3 bucket then use below line:
+#spark-submit --verbose --deploy-mode cluster --class com.swapnil.WordCount  s3://swap-part-929/scala_sbt_test_2.11-0.1.jar
